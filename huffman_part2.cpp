@@ -63,7 +63,7 @@ void poplist()
         head=t1->next;
         t2=head;
         head=t2->next;
-        heap->data='x';
+        heap->data='/';
         heap->fre=((t1->fre)+(t2->fre));
         heap->left=t1;
         heap->right=t2;
@@ -88,9 +88,9 @@ void showtree(node *temp)
 }
 void binarylist(node *temp)
 {
-    if(temp->data!='x')
+    if(temp->data!='/')
     {
-        cout<<temp->data<<"  "<<temp->fre<<"  ";
+        cout<<temp->data<<"  ";
         for (std::vector<int>::iterator it = temp->v.begin() ; it != temp->v.end(); ++it)
             std::cout << *it;
         cout<<endl;
@@ -129,7 +129,7 @@ int main()
         temp->left=NULL;
         listinsert(temp);
     }
-    show();
+    //show();
     poplist();
     cout<<"\n",
     //showtree(head);
